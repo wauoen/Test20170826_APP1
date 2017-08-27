@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.test.test20170826_app1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity1"
+
+            android:taskAffinity="com.test.affinity"
+            android:allowTaskReparenting="true">
+
+        </activity>
+
+        <activity android:name=".Activity2"
+            android:taskAffinity="com.test.affinity2"
+            android:allowTaskReparenting="false"/>
+        <activity android:name=".Activity3"
+            android:taskAffinity="com.test.affinity"
+            android:allowTaskReparenting="true"/>
+
+        <activity android:name=".Activity5"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.test.affinity2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
